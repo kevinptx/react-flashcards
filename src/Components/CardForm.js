@@ -31,6 +31,7 @@ class CardForm extends React.Component {
       <form className="card-form" onSubmit={this.handleSubmit}>
         <textarea
           placeholder="Question:"
+          autoFocus
           name="front"
           value={front}
           className="input"
