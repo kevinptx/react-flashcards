@@ -1,7 +1,12 @@
 import React from "react";
-import CardForm from "./Components/CardForm";
+import CardForm from "./components/CardForm";
 import "./Styles/App.scss";
-import CardList from "./Components/CardList";
+import CardList from "./components/CardList";
+import "semantic-ui-css/semantic.min.css";
+//turn the App.js into the router and can make a whole new component and put the functions in a new component or just leave them and add react router with static pages.
+//set it up in index and if App is the component that you wrap the router tags in then this is where the routes go in App.js. In render function you want to render /Home or /About static pages.
+//The index is where you define what the main parent component is. The component in index is where all the components are wrapped. It's the top level, which can be anything.
+//want page to have navbar at the top and be able to click on other components in the navbar: Home, About, Cards.
 
 class App extends React.Component {
   state = {
@@ -36,6 +41,7 @@ class App extends React.Component {
   //CREATE CARD FOR ARRAY
   createCard = (front, back) => {
     let { cards } = this.state;
+    // correct is for adding history, to go back and change the boolean.
     let card = { id: this.getId(), front, back, correct: false };
     this.setState({
       cards: [...cards, card]
