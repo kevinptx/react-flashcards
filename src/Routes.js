@@ -9,7 +9,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
-import Card from "./components/Card";
+import App from "./App";
 
 const Routes = () => (
   <Fragment>
@@ -18,7 +18,7 @@ const Routes = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
-        <Route exact path="/card" component={Card} />
+        <Route exact path="/card" component={App} />
         <Route component={NoMatch} />
       </Switch>
     </Container>
